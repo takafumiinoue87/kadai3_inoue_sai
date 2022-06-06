@@ -1,0 +1,130 @@
+@charset"utf-8";
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #4c4c4c;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+
+
+/* ここから */
+.wrap {
+    max-width: 960px;
+    background-color: #eeeeee;
+    /* height: 590px;　自動調整の為、高さ不要 */
+    margin: 0 auto;
+    /* 下と左右に5％ */
+    padding: 0 5% 5%;
+
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    color: lightseagreen;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 60px;
+}
+
+img {
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.box1,
+.box2,
+.box3 {
+    font-size: 15px;
+    margin: 50px 0px;
+    /* margin: 50px 8px;　下で幅％を取る為8pxを0に */
+    /* ここに幅％をとる */
+    width: 30%;
+}
+
+.box1 div,
+.box2 div,
+.box3 div {
+    background-color: white;
+    border: solid 1px white;
+    /*width: 300px;  固定値は入れない */
+    /* height: 150px;　高さ不要 */
+}
+
+h2 {
+    color: lightseagreen;
+    padding-left: 5px;
+}
+
+.service1 h2,
+.service2 h2,
+.service3 h2 {
+    border-left: 10px solid;
+    margin: 10px 0 0 10px;
+}
+
+.box1 p,
+.box2 p,
+.box3 p {
+    margin: 10px 8px 10px 12px;
+    letter-spacing: -0.1em;
+    line-height: 1.4;
+}
+
+@media screen and (max-width:400px) {
+    .content {
+        display: block;
+    }
+
+    /* .box1,
+    .box2,
+    .box3 {
+        margin: 0 0 10% 0;
+        padding: 0 0 3% 0;
+    } */
+
+    .box1,
+    .box2,
+    .box3 {
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+    }
+}
